@@ -10,11 +10,11 @@ public class Person
     lastName="";
     firstName="";
   }
-  public Person(int a, String f, String l)
+  public Person(int newAge, String first, String last)
   {
-    age=a;
-    firstName=f;
-    lastName=l;
+    age=newAge;
+    firstName=first;
+    lastName=last;
   }
   public String getFirstName()
   {
