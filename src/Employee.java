@@ -5,9 +5,16 @@ public class Employee extends Person
   private int hoursWorked;
   private String jobTitle;
   private Manager manager;
+  public Employee(String first, String last, int newAge, double wage, int hours, String title)
+  {
+    super(newAge, first, last);
+    hourlyWage=wage;
+    hoursWorked=hours;
+    jobTitle=title;
+  }
   public double getWage()
   {
-    retrurn hourlyWage;
+    return hourlyWage;
   }
   public int getHours()
   {
@@ -27,25 +34,25 @@ public class Employee extends Person
   }
   public String toString()
   {
-    return lastName", "+firstName+": "+jobTitle"@"+hourlyWage;
+    return super.toString()+" :"+jobTitle+"@ "+getYearlySalary();
   }
-  public setWage(double newWage)
+  public void setWage(double newWage)
   {
     hourlyWage=newWage;
   }
-  public setHours(newHours)
+  public void setHours(int newHours)
   {
     hoursWorked=newHours;
   }
-  public setTitle(newTitle)
+  public void setTitle(String newTitle)
   {
     jobTitle=newTitle;
   }
-  public getRaise()
+  public void getRaise()
   {
     hourlyWage++;
   }
-  public setManager(Manager newManager)
+  public void setManager(Manager newManager)
   {
     manager=newManager;
   }
