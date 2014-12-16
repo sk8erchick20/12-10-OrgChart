@@ -56,11 +56,11 @@ public class Employee extends Person
   {
     manager=newManager;
   }
-  public boolean equals(Object o)
+  public boolean equals(Object a)
   {
     if(o instanceof Employee)
     {
-      Employee other = (Employee) o;
+      Employee other = (Employee) a;
       return getFirstName()== other.getFirstName() && getLastName()==other.getLastName() && getAge()==other.getAge() && getWage()== other.getWage() && getHours() == other.getHours() && getJobTitle()==other.getJobTitle()&& getManager()==other.getManager();
     }
     else
