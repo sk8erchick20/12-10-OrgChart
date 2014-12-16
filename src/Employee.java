@@ -56,4 +56,16 @@ public class Employee extends Person
   {
     manager=newManager;
   }
+  public boolean equals(Object o)
+  {
+    if(o instanceof Employee)
+    {
+      Employee other = (Employee) o;
+      return getFirstName()== other.getFirstName() && getLastName()==other.getLastName() && getAge()==other.getAge() && getWage()== other.getWage() && getHours() == other.getHours() && getJobTitle()==other.getJobTitle()&& getManager()==other.getManager();
+    }
+    else
+    {
+      return false;
+    }
+  }
 }
